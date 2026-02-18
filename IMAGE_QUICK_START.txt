@@ -1,0 +1,257 @@
+# AMMS Image Upload - Quick Start Guide
+
+## What You Need to Do
+
+Your website is ready for images! Here's exactly what to do:
+
+### 5 Images Required:
+
+1. **essentials.jpg** - Featured collection card (Essentials)
+   - Size: 400x400 pixels or larger
+   - Format: JPG or PNG
+   
+2. **seasonal.jpg** - Featured collection card (Seasonal Drops)
+   - Size: 400x400 pixels or larger
+   - Format: JPG or PNG
+
+3. **capsule.jpg** - Featured collection card (Capsule Wardrobe)
+   - Size: 400x400 pixels or larger
+   - Format: JPG or PNG
+
+4. **campaign.jpg** - Campaign section image (next to "Redefining Modern Elegance")
+   - Size: 500x600 pixels (portrait style)
+   - Format: JPG or PNG
+
+5. **about-hero.jpg** - About page hero section (behind "AMMS" text)
+   - Size: 1200x800 pixels (landscape style)
+   - Format: JPG or PNG
+
+### Where to Save Images
+
+**Folder Path**: `c:\xampp\htdocs\Retail system\assets\images\`
+
+This folder already exists and is ready for your images.
+
+---
+
+## Step-by-Step Instructions
+
+### Option 1: Using File Manager (Windows)
+
+1. **Open File Manager**
+   - Press `Win + E` to open Windows File Manager
+
+2. **Navigate to Images Folder**
+   - Go to: `C:\xampp\htdocs\Retail system\assets\images\`
+
+3. **Copy Your Images Here**
+   - Copy each image file and paste into this folder
+   - Use exact filenames:
+     - essentials.jpg
+     - seasonal.jpg
+     - capsule.jpg
+     - campaign.jpg
+     - about-hero.jpg
+
+4. **Test on Website**
+   - Open your website in browser
+   - Refresh page (Ctrl+F5 to clear cache)
+   - Images should now appear!
+
+### Option 2: Using Command Line (Advanced)
+
+```bash
+# Navigate to directory
+cd "c:\xampp\htdocs\Retail system\assets\images"
+
+# Copy images (replace paths with your image locations)
+copy "C:\Users\YourName\Pictures\essentials.jpg" essentials.jpg
+copy "C:\Users\YourName\Pictures\seasonal.jpg" seasonal.jpg
+copy "C:\Users\YourName\Pictures\capsule.jpg" capsule.jpg
+copy "C:\Users\YourName\Pictures\campaign.jpg" campaign.jpg
+copy "C:\Users\YourName\Pictures\about-hero.jpg" about-hero.jpg
+```
+
+---
+
+## Getting Images
+
+### Option 1: Use Your Own Photos
+- Take professional photos of your products
+- Use a good camera or smartphone
+- Edit for consistency
+
+### Option 2: Free Stock Photos
+- **Unsplash.com** - Free high-quality images
+- **Pexels.com** - Free stock photography
+- **Pixabay.com** - Free images
+- Search for "fashion", "accessories", "minimal", "elegance"
+
+### Option 3: Create with Design Tools
+- **Canva.com** - Design templates and images
+- **Adobe Express** - Free design tool
+- **Figma** - Professional design tool
+
+---
+
+## Image Optimization Tips
+
+### Before Uploading:
+
+1. **Check Dimensions**
+   - Featured cards: Square (400x400 minimum)
+   - Campaign: 500x600 pixels
+   - About hero: 1200x800 pixels
+
+2. **Compress Images**
+   - Use **TinyPNG.com** (recommend this)
+   - Or **JPEGmini.com**
+   - Goal: Keep under 150 KB per image
+
+3. **Save as JPG**
+   - Better compression than PNG for photos
+   - Smaller file sizes = faster loading
+
+4. **Match Brand Aesthetic**
+   - Use minimal, clean images
+   - Black, white, beige, grey tones
+   - Professional and elegant look
+
+---
+
+## Check Your Work
+
+### After Adding Images:
+
+1. **Open Website**
+   - Go to `http://localhost/Retail system/index.php`
+
+2. **Check Homepage**
+   - Look for 3 featured collection images at top
+   - Look for campaign image in middle section
+
+3. **Check About Page**
+   - Go to About page
+   - Look for background image behind "AMMS" text
+
+4. **Mobile Test**
+   - Check on mobile device or resize browser
+   - Images should scale responsively
+
+5. **Clear Cache if Needed**
+   - Press `Ctrl + Shift + Delete`
+   - Select "All time" and clear cache
+   - Refresh website
+
+---
+
+## Image Display Reference
+
+### Homepage (index.php)
+```
+┌─────────────┐  ┌─────────────┐  ┌─────────────┐
+│ Essentials  │  │ Seasonal    │  │ Capsule     │
+│ essentials  │  │ seasonal    │  │ capsule     │
+│ .jpg        │  │ .jpg        │  │ .jpg        │
+│ 400x400     │  │ 400x400     │  │ 400x400     │
+└─────────────┘  └─────────────┘  └─────────────┘
+
+     [Campaign Section]
+┌──────────────────┐  ┌──────────────────────────┐
+│                  │  │ Redefining Modern        │
+│  campaign.jpg    │  │ Elegance                 │
+│  500x600px       │  │ (text content here)      │
+│ (portrait)       │  │                          │
+└──────────────────┘  └──────────────────────────┘
+```
+
+### About Page (about.php)
+```
+┌──────────────────────────────────────┐
+│  about-hero.jpg (1200x800)           │
+│  ▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓  │
+│  ▓▓▓▓▓▓▓▓  AMMS  ▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓  │  (image visible behind text)
+│  ▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓  │
+└──────────────────────────────────────┘
+```
+
+---
+
+## Filename Reference
+
+**IMPORTANT**: Filenames must be EXACT and lowercase with .jpg extension:
+
+```
+✓ CORRECT:
+  - essentials.jpg
+  - seasonal.jpg
+  - capsule.jpg
+  - campaign.jpg
+  - about-hero.jpg
+
+✗ WRONG (won't work):
+  - Essentials.jpg (capital E)
+  - seasonal.JPG (capital JPG)
+  - CAPSULE.jpg (all caps)
+  - campaign.png (wrong extension)
+  - abouthero.jpg (missing hyphen)
+```
+
+---
+
+## Troubleshooting
+
+### Q: Images not showing?
+**A:** 
+- Check filename spelling exactly
+- Verify files are in `assets/images/` folder
+- Clear browser cache (Ctrl+Shift+Delete)
+- Refresh page (Ctrl+F5)
+
+### Q: Images look blurry?
+**A:**
+- Use higher resolution source
+- Check original image quality
+- Try re-saving at higher quality
+
+### Q: Page loads slow?
+**A:**
+- Compress images more (TinyPNG)
+- Reduce file size under 150 KB each
+- Use JPG instead of PNG
+
+### Q: Can't find assets/images folder?
+**A:**
+- Navigate to: `C:\xampp\htdocs\Retail system\`
+- Look for `assets` folder
+- Inside should be `images` folder
+- If doesn't exist, create it manually
+
+---
+
+## Still Need Help?
+
+1. Check the detailed **DESIGN_GUIDE.md** file
+2. Check **assets/images/README.md** for more info
+3. All image placeholders removed - just add your own!
+
+---
+
+## Summary
+
+**What to do NOW:**
+1. Get 5 images ready
+2. Resize to correct dimensions
+3. Compress with TinyPNG
+4. Save as JPG with correct names
+5. Copy to `c:\xampp\htdocs\Retail system\assets\images\`
+6. Refresh website - Done! 🎉
+
+**File Names (copy exactly):**
+- essentials.jpg
+- seasonal.jpg
+- capsule.jpg
+- campaign.jpg
+- about-hero.jpg
+
+**Ready to go!**

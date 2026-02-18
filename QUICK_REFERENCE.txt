@@ -1,0 +1,222 @@
+# AMMS - Image Setup Reference Card
+
+## 🎯 Your Task (Super Simple!)
+
+1. Get 5 images
+2. Resize them
+3. Rename them
+4. Upload them
+5. Done! ✨
+
+---
+
+## 📋 The 5 Files You Need
+
+```
+FILENAME                SIZE          LOCATION ON SITE
+─────────────────────────────────────────────────────────
+essentials.jpg      400×400px      Homepage - Featured #1
+seasonal.jpg        400×400px      Homepage - Featured #2  
+capsule.jpg         400×400px      Homepage - Featured #3
+campaign.jpg        500×600px      Homepage - Campaign Section
+about-hero.jpg      1200×800px     About Page - Hero
+```
+
+**All go in**: `assets/images/` folder
+
+---
+
+## 📍 Where on Website
+
+### Homepage
+```
+Essentials | Seasonal | Capsule
+───────────────────────────────
+    campaign.jpg    │ Text here
+```
+
+### About Page
+```
+[about-hero.jpg showing with AMMS text overlay]
+```
+
+---
+
+## ✅ Filename Rules
+
+- **essentials.jpg** ← lowercase, .jpg extension
+- **seasonal.jpg** ← NO spaces
+- **capsule.jpg** ← NO underscores
+- **campaign.jpg** ← hyphens OK (campaign-2, etc)
+- **about-hero.jpg** ← use hyphen, NOT underscore
+
+---
+
+## 📁 Upload Path
+
+```
+c:\xampp\htdocs\Retail system\assets\images\
+```
+
+Folder already exists! Just copy files here.
+
+---
+
+## 🚀 Quick Process
+
+| Step | Action | Time |
+|------|--------|------|
+| 1 | Get images | varies |
+| 2 | Resize to sizes above | 5 min |
+| 3 | Compress with TinyPNG | 5 min |
+| 4 | Rename 5 files correctly | 2 min |
+| 5 | Copy to assets/images/ | 1 min |
+| 6 | Test website | 2 min |
+| **TOTAL** | **From 0 to gorgeous site** | **20 min** |
+
+---
+
+## 🔍 Verification
+
+After uploading, check:
+
+```
+✓ Homepage shows 3 featured images in row
+✓ Campaign image appears in campaign section
+✓ About page shows image behind AMMS text
+✓ No broken image icons
+✓ Images load quickly
+✓ Works on mobile (resize browser)
+```
+
+---
+
+## 📸 Image Ideas
+
+### essentials.jpg
+- Wardrobe basics
+- Simple clothing items
+- Minimalist styling
+- Black/white photography
+
+### seasonal.jpg
+- Latest collection
+- Trending items
+- Seasonal styles
+- Current offerings
+
+### capsule.jpg
+- Coordinated outfits
+- Pieces that work together
+- Complete looks
+- Versatile items
+
+### campaign.jpg
+- Your best product
+- Editorial shoot
+- Brand hero image
+- High-impact visual
+
+### about-hero.jpg
+- Brand photography
+- Lifestyle shot
+- Your team/story
+- Professional imagery
+
+---
+
+## 🔧 Quick Fixes
+
+**Images not showing?**
+```
+1. Check filename spelling
+2. Ctrl+Shift+Delete to clear cache
+3. Ctrl+F5 to refresh page
+4. Verify in assets/images/ folder
+```
+
+**Images too large (slow)?**
+```
+1. Go to TinyPNG.com
+2. Upload image
+3. Download compressed version
+4. Re-upload to server
+```
+
+**Need free images?**
+```
+Unsplash.com - search "fashion minimalist"
+Pexels.com - search "luxury clothing"
+Pixabay.com - search "elegant aesthetic"
+```
+
+---
+
+## 📚 More Help
+
+- **SETUP_IMAGES_HERE.txt** - Complete guide
+- **IMAGE_QUICK_START.txt** - Step-by-step
+- **IMAGE_PLACEMENT_MAP.txt** - Visual layout  
+- **assets/images/README.md** - Technical specs
+
+---
+
+## 🎨 Brand Tips
+
+For luxury AMMS aesthetic:
+- Clean, professional photography
+- Minimal backgrounds  
+- Black/white/beige/grey tones
+- High quality, sharp focus
+- Magazine-style editorial look
+- Consistent editing across all images
+- NO bright colors or clutter
+
+---
+
+## 💡 Remember
+
+**Filenames must be EXACT:**
+```
+✓ essentials.jpg
+✓ seasonal.jpg  
+✓ capsule.jpg
+✓ campaign.jpg
+✓ about-hero.jpg
+
+✗ Essentials.jpg (capital E) - WON'T WORK
+✗ seasonal.png (wrong extension) - WON'T WORK
+✗ capsule_wardrobe.jpg (too long) - WON'T WORK
+```
+
+---
+
+## ✨ You're Set!
+
+Everything is ready. Just add your images and you're done!
+
+**Current Status**: 🟢 Ready  
+**What's Left**: Add 5 images  
+**Time to Complete**: 15-20 minutes  
+**Difficulty**: ⭐ Super Easy!
+
+---
+
+## 📞 Questions?
+
+All answered in the documentation files included with your website.
+
+**Start with**: SETUP_IMAGES_HERE.txt
+
+---
+
+## 🎉 Summary
+
+Your AMMS luxury retail website is completely set up with:
+- ✅ Beautiful design
+- ✅ All pages configured
+- ✅ Image folders ready
+- ✅ Documentation complete
+- ⏳ Just waiting for YOUR 5 images!
+
+**Add images → Test → Launch → Success!** 🚀

@@ -1,0 +1,251 @@
+# AMMS Image Placement Map
+
+## Homepage (index.php) - 4 Images
+
+### Section 1: Featured Collection (3 Images in Row)
+**Location**: Below hero section
+**Layout**: 3 equal columns
+
+```
+═══════════════════════════════════════════════════════════════
+                    FEATURED COLLECTION
+═══════════════════════════════════════════════════════════════
+
+┌─────────────────────┐  ┌─────────────────────┐  ┌─────────────────────┐
+│                     │  │                     │  │                     │
+│   essentials.jpg    │  │   seasonal.jpg      │  │   capsule.jpg       │
+│   (400x400px)       │  │   (400x400px)       │  │   (400x400px)       │
+│                     │  │                     │  │                     │
+├─────────────────────┤  ├─────────────────────┤  ├─────────────────────┤
+│                     │  │                     │  │                     │
+│  Essentials         │  │  Seasonal Drops     │  │  Capsule Wardrobe   │
+│                     │  │                     │  │                     │
+│  Timeless pieces    │  │  Limited-edition    │  │  Foundation of      │
+│  for everyday wear. │  │  collections        │  │  timeless style.    │
+│  Clean, refined,    │  │  released           │  │  Pieces that work   │
+│  and effortlessly   │  │  thoughtfully       │  │  together           │
+│  elegant.           │  │  throughout the     │  │  seamlessly.        │
+│                     │  │  year.              │  │                     │
+└─────────────────────┘  └─────────────────────┘  └─────────────────────┘
+```
+
+---
+
+### Section 2: Campaign Section (1 Large Image + Text)
+**Location**: Center of homepage, after featured collection
+**Layout**: 2 columns (image on left, text on right)
+
+```
+═══════════════════════════════════════════════════════════════
+         REDEFINING MODERN ELEGANCE (Campaign Section)
+═══════════════════════════════════════════════════════════════
+
+┌──────────────────────────────┐  ┌──────────────────────────────┐
+│                              │  │                              │
+│         campaign.jpg          │  │  Redefining Modern Elegance  │
+│        (500x600px)            │  │                              │
+│      (portrait style)         │  │  AMMS was founded with a     │
+│                              │  │  singular vision...          │
+│  (shows fashion product       │  │                              │
+│   or editorial style image)   │  │  [Learn Our Story button]    │
+│                              │  │                              │
+│                              │  │                              │
+└──────────────────────────────┘  └──────────────────────────────┘
+```
+
+---
+
+## About Page (about.php) - 1 Hero Image
+
+### Section 1: About Hero Section (Full Width with Overlay)
+**Location**: Top of About page
+**Layout**: Full-width with image as background behind text
+**Style**: Image shown at 70% opacity with "AMMS" text overlay
+
+```
+═══════════════════════════════════════════════════════════════
+                      ABOUT PAGE HERO
+═══════════════════════════════════════════════════════════════
+
+┌───────────────────────────────────────────────────────────────┐
+│                                                               │
+│        ▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓       │
+│        ▓▓▓▓▓  about-hero.jpg (1200x800px)  ▓▓▓▓▓       │
+│        ▓▓▓▓▓  (1:3 aspect ratio landscape)  ▓▓▓▓▓       │
+│        ▓▓▓▓▓  70% opacity showing through   ▓▓▓▓▓       │
+│        ▓▓▓▓▓                                 ▓▓▓▓▓       │
+│        ▓▓▓▓▓                                 ▓▓▓▓▓       │
+│        ▓▓▓▓▓        Image showing here       ▓▓▓▓▓       │
+│        ▓▓▓▓▓        with "AMMS" text        ▓▓▓▓▓       │
+│        ▓▓▓▓▓        overlaid on top         ▓▓▓▓▓       │
+│        ▓▓▓▓▓                                 ▓▓▓▓▓       │
+│        ▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓       │
+│                                                               │
+└───────────────────────────────────────────────────────────────┘
+```
+
+---
+
+## Image Summary Table
+
+| Image File | Location | Dimensions | Aspect Ratio | Format | Size |
+|---|---|---|---|---|---|
+| essentials.jpg | Homepage Featured #1 | 400x400px | 1:1 (Square) | JPG/PNG | <150KB |
+| seasonal.jpg | Homepage Featured #2 | 400x400px | 1:1 (Square) | JPG/PNG | <150KB |
+| capsule.jpg | Homepage Featured #3 | 400x400px | 1:1 (Square) | JPG/PNG | <150KB |
+| campaign.jpg | Homepage Campaign Section | 500x600px | 5:6 (Portrait) | JPG/PNG | <200KB |
+| about-hero.jpg | About Page Hero | 1200x800px | 3:2 (Landscape) | JPG/PNG | <300KB |
+
+---
+
+## Responsive Display
+
+### Desktop (1400px+)
+- All images display at full specified dimensions
+- Featured cards: 3 columns side by side
+- Campaign: 2 columns (image + text)
+- About hero: Full width
+
+### Tablet (1024px)
+- Featured cards: Still 3 columns (slightly smaller)
+- Campaign: 2 columns (adjusted gap)
+- About hero: Full width
+
+### Mobile (768px)
+- Featured cards: 2 columns (wraps to 2 rows)
+- Campaign: Stacked (image on top, text below)
+- About hero: Full width
+
+### Small Mobile (480px)
+- Featured cards: 1 column (all 3 stacked)
+- Campaign: Stacked vertically
+- About hero: Full width
+
+---
+
+## Image Replacement Process
+
+### When You Have Your Images Ready:
+
+1. **Prepare Images**
+   - Resize to correct dimensions
+   - Compress with TinyPNG or ImageOptim
+   - Save as JPG (recommended) or PNG
+
+2. **Rename Files** (EXACT names required)
+   ```
+   essentials.jpg
+   seasonal.jpg
+   capsule.jpg
+   campaign.jpg
+   about-hero.jpg
+   ```
+
+3. **Upload to Server**
+   - Navigate to: `c:\xampp\htdocs\Retail system\assets\images\`
+   - Copy/paste images into this folder
+   - (Folder already exists and is ready)
+
+4. **Verify Display**
+   - Open website in browser
+   - Refresh page (Ctrl+F5)
+   - Check homepage for featured images
+   - Check campaign section
+   - Check About page hero
+
+---
+
+## HTML Code Reference
+
+If you need to see where images are used in the code:
+
+### Homepage Featured Section (index.php)
+```php
+<div class="featured-grid">
+    <div class="featured-card">
+        <img src="assets/images/essentials.jpg" alt="Essentials">
+        ...
+    </div>
+    <div class="featured-card">
+        <img src="assets/images/seasonal.jpg" alt="Seasonal">
+        ...
+    </div>
+    <div class="featured-card">
+        <img src="assets/images/capsule.jpg" alt="Capsule">
+        ...
+    </div>
+</div>
+```
+
+### Campaign Section (index.php)
+```php
+<div class="campaign-image">
+    <img src="assets/images/campaign.jpg" alt="Redefining Modern Elegance">
+</div>
+```
+
+### About Hero (about.php)
+```php
+<section class="about-hero">
+    <div class="about-hero-content">
+        <img src="assets/images/about-hero.jpg" alt="AMMS" class="about-hero-image">
+        <h1>AMMS</h1>
+    </div>
+</section>
+```
+
+---
+
+## CSS Display Properties
+
+The images use these styling properties (from style.css):
+
+### Featured Cards
+- Width: 100% of container
+- Height: 400px
+- Object-fit: cover (maintains aspect ratio)
+- Hover effect: Scale up 1.05x
+- Transition: Smooth 0.3s transitions
+
+### Campaign Image
+- Width: 100% of container
+- Height: 500px
+- Object-fit: cover
+- Displays next to text in grid layout
+
+### About Hero Image
+- Position: Absolute (behind text)
+- Width & Height: 100% of parent
+- Object-fit: cover
+- Opacity: 70% (semi-transparent)
+
+---
+
+## Final Checklist
+
+Before launching with images:
+
+- [ ] All 5 images are ready (essentials, seasonal, capsule, campaign, about-hero)
+- [ ] Images are resized to correct dimensions
+- [ ] Images are compressed (kept file size reasonable)
+- [ ] Images are saved as JPG or PNG
+- [ ] Filenames are exact (lowercase with hyphens)
+- [ ] Images are in `assets/images/` folder
+- [ ] Website homepage displays all 3 featured images
+- [ ] Campaign section shows campaign image
+- [ ] About page shows hero image behind text
+- [ ] Mobile responsiveness works correctly
+- [ ] All images load quickly
+
+---
+
+## Next Steps
+
+1. **Get your images ready** - Take photos, design graphics, or source from stock sites
+2. **Resize and compress** - Use provided dimensions and optimize file size
+3. **Save with correct names** - Use exact filenames (essentials.jpg, etc.)
+4. **Upload to assets/images/** - Copy files to the folder
+5. **Test on website** - Verify all images display correctly
+6. **Go live!** - Your luxury site is ready
+
+**That's it! Your AMMS luxury brand website is ready for images.** 🎨✨

@@ -1,0 +1,380 @@
+# 🎨 AMMS - Image Placement Diagram
+
+## Homepage Visual Layout
+
+```
+┌─────────────────────────────────────────────────────────────────────────┐
+│                                                                         │
+│                    HEADER (AMMS - Navigation)                           │
+│                                                                         │
+├─────────────────────────────────────────────────────────────────────────┤
+│                                                                         │
+│                          HERO SECTION                                   │
+│                     "Power in Simplicity"                               │
+│                   (No image change here)                                │
+│                                                                         │
+├─────────────────────────────────────────────────────────────────────────┤
+│                                                                         │
+│                    FEATURED COLLECTION                                  │
+│                                                                         │
+│    ┌──────────────────┬──────────────────┬──────────────────┐          │
+│    │                  │                  │                  │          │
+│    │ ┏━━━━━━━━━━━━┓  │ ┏━━━━━━━━━━━━┓  │ ┏━━━━━━━━━━━━┓  │          │
+│    │ ┃essentials  ┃  │ ┃ seasonal   ┃  │ ┃ capsule    ┃  │          │
+│    │ ┃.jpg        ┃  │ ┃.jpg        ┃  │ ┃.jpg        ┃  │          │
+│    │ ┃400×400px   ┃  │ ┃400×400px   ┃  │ ┃400×400px   ┃  │          │
+│    │ ┗━━━━━━━━━━━━┛  │ ┗━━━━━━━━━━━━┛  │ ┗━━━━━━━━━━━━┛  │          │
+│    │                  │                  │                  │          │
+│    │   Essentials    │   Seasonal       │   Capsule        │          │
+│    │   Timeless...   │   Limited...     │   Foundation...  │          │
+│    │                  │                  │                  │          │
+│    └──────────────────┴──────────────────┴──────────────────┘          │
+│                                                                         │
+├─────────────────────────────────────────────────────────────────────────┤
+│                                                                         │
+│              REDEFINING MODERN ELEGANCE (Campaign)                      │
+│                                                                         │
+│  ┌────────────────────────────────────┬──────────────────────────────┐ │
+│  │                                    │                              │ │
+│  │     ┏━━━━━━━━━━━━━━━━━━━━━━┓       │      H2: Redefining         │ │
+│  │     ┃  campaign.jpg        ┃       │      Modern Elegance        │ │
+│  │     ┃  (500×600px)         ┃       │                              │ │
+│  │     ┃  Portrait style image┃       │      Paragraph text...      │ │
+│  │     ┃  for campaign        ┃       │      (brand story)          │ │
+│  │     ┃                      ┃       │                              │ │
+│  │     ┃                      ┃       │      [Learn Our Story]       │ │
+│  │     ┃                      ┃       │      button                 │ │
+│  │     ┗━━━━━━━━━━━━━━━━━━━━━━┛       │                              │ │
+│  │                                    │                              │ │
+│  └────────────────────────────────────┴──────────────────────────────┘ │
+│                                                                         │
+├─────────────────────────────────────────────────────────────────────────┤
+│                                                                         │
+│                            FOOTER                                       │
+│                       (No image change)                                 │
+│                                                                         │
+└─────────────────────────────────────────────────────────────────────────┘
+```
+
+---
+
+## About Page Visual Layout
+
+```
+┌─────────────────────────────────────────────────────────────────────────┐
+│                                                                         │
+│                    HEADER (AMMS - Navigation)                           │
+│                                                                         │
+├─────────────────────────────────────────────────────────────────────────┤
+│                                                                         │
+│                        ABOUT HERO SECTION                               │
+│                                                                         │
+│  ┌───────────────────────────────────────────────────────────────────┐ │
+│  │ ▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓│ │
+│  │ ▓▓                                                            ▓▓│ │
+│  │ ▓▓         ┏━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━┓             ▓▓│ │
+│  │ ▓▓         ┃about-hero.jpg (1200×800px) ┃             ▓▓│ │
+│  │ ▓▓         ┃Landscape, 70% opacity     ┃             ▓▓│ │
+│  │ ▓▓         ┗━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━┛             ▓▓│ │
+│  │ ▓▓                                                            ▓▓│ │
+│  │ ▓▓                         AMMS                              ▓▓│ │
+│  │ ▓▓                 (text overlaid on image)                 ▓▓│ │
+│  │ ▓▓                                                            ▓▓│ │
+│  │ ▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓│ │
+│  └───────────────────────────────────────────────────────────────────┘ │
+│                                                                         │
+├─────────────────────────────────────────────────────────────────────────┤
+│                                                                         │
+│  ABOUT CONTENT SECTIONS (Power in Simplicity, Philosophy, etc.)        │
+│  (No image changes - just text)                                        │
+│                                                                         │
+├─────────────────────────────────────────────────────────────────────────┤
+│                                                                         │
+│                            FOOTER                                       │
+│                       (No image change)                                 │
+│                                                                         │
+└─────────────────────────────────────────────────────────────────────────┘
+```
+
+---
+
+## Responsive Display Examples
+
+### Desktop (1400px+) - Featured Section
+```
+┌──────────────────┬──────────────────┬──────────────────┐
+│ Category Image 1 │ Category Image 2 │ Category Image 3 │
+│    (Large)       │    (Large)       │    (Large)       │
+│  Full size       │  Full size       │  Full size       │
+└──────────────────┴──────────────────┴──────────────────┘
+```
+
+### Tablet (1024px) - Featured Section
+```
+┌────────────────┬────────────────┬────────────────┐
+│   Image 1      │   Image 2      │   Image 3      │
+│  (Medium)      │  (Medium)      │  (Medium)      │
+│ Slightly       │ Slightly       │  Slightly      │
+│ smaller        │ smaller        │  smaller       │
+└────────────────┴────────────────┴────────────────┘
+```
+
+### Mobile (768px) - Featured Section  
+```
+┌──────────────┬──────────────┐
+│   Image 1    │   Image 2    │
+│  (Smaller)   │  (Smaller)   │
+└──────────────┴──────────────┘
+│   Image 3    │
+│  (Smaller)   │
+└──────────────┘
+```
+
+### Mobile (480px) - Featured Section
+```
+┌──────────────┐
+│   Image 1    │
+│  (Full W)    │
+└──────────────┘
+│   Image 2    │
+│  (Full W)    │
+└──────────────┘
+│   Image 3    │
+│  (Full W)    │
+└──────────────┘
+```
+
+---
+
+## Featured Cards - Individual Details
+
+### Card 1: Essentials
+```
+┌────────────────────────┐
+│                        │
+│  essentials.jpg        │
+│  ↓ Displays as ↓       │
+│  400×400px image       │
+│  (square)              │
+│                        │
+├────────────────────────┤
+│                        │
+│  Essentials            │
+│  (heading)             │
+│                        │
+│  Timeless pieces       │
+│  for everyday wear.    │
+│  Clean, refined, and   │
+│  effortlessly elegant. │
+│  (description)         │
+│                        │
+└────────────────────────┘
+```
+
+### Card 2: Seasonal Drops
+```
+┌────────────────────────┐
+│                        │
+│  seasonal.jpg          │
+│  ↓ Displays as ↓       │
+│  400×400px image       │
+│  (square)              │
+│                        │
+├────────────────────────┤
+│                        │
+│  Seasonal Drops        │
+│  (heading)             │
+│                        │
+│  Limited-edition       │
+│  collections released  │
+│  thoughtfully          │
+│  throughout the year.  │
+│  (description)         │
+│                        │
+└────────────────────────┘
+```
+
+### Card 3: Capsule Wardrobe
+```
+┌────────────────────────┐
+│                        │
+│  capsule.jpg           │
+│  ↓ Displays as ↓       │
+│  400×400px image       │
+│  (square)              │
+│                        │
+├────────────────────────┤
+│                        │
+│  Capsule Wardrobe      │
+│  (heading)             │
+│                        │
+│  The foundation of     │
+│  timeless style.       │
+│  Pieces that work      │
+│  together seamlessly.  │
+│  (description)         │
+│                        │
+└────────────────────────┘
+```
+
+---
+
+## Campaign Section - Layout Details
+
+```
+DESKTOP (1400px+):
+┌─────────────────────────────────────────────────────────┐
+│                     Campaign Section                    │
+│ ┌──────────────────────┐  ┌───────────────────────────┐ │
+│ │                      │  │ H2: Redefining Modern     │ │
+│ │ campaign.jpg         │  │ Elegance                  │ │
+│ │ 500×600px            │  │                           │ │
+│ │ (portrait)           │  │ P: AMMS was founded...    │ │
+│ │ left side            │  │                           │ │
+│ │                      │  │ P: Our collections...     │ │
+│ │ ▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓ │  │                           │ │
+│ │ ▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓ │  │ [Learn Our Story] Button │ │
+│ │ ▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓ │  │                           │ │
+│ └──────────────────────┘  └───────────────────────────┘ │
+└─────────────────────────────────────────────────────────┘
+
+TABLET (1024px):
+┌─────────────────────────────────────────────────────┐
+│                  Campaign Section                   │
+│ ┌───────────────────────┐  ┌──────────────────────┐ │
+│ │                       │  │ Heading on right     │ │
+│ │ campaign.jpg          │  │                      │ │
+│ │ (500×600px)           │  │ Text on right        │ │
+│ │ ▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓  │  │                      │ │
+│ │ ▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓  │  │ Button               │ │
+│ │ ▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓  │  │                      │ │
+│ └───────────────────────┘  └──────────────────────┘ │
+└─────────────────────────────────────────────────────┘
+
+MOBILE (768px):
+┌─────────────────────────────────────────────────┐
+│           Campaign Section (STACKED)            │
+│ ┌─────────────────────────────────────────────┐ │
+│ │          campaign.jpg                       │ │
+│ │          (full width)                       │ │
+│ │ ▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓│ │
+│ │ ▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓│ │
+│ │ ▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓│ │
+│ └─────────────────────────────────────────────┘ │
+│                                                 │
+│ Redefining Modern Elegance                      │
+│ AMMS was founded with a singular vision...      │
+│ Our collections feature clean lines...          │
+│ [Learn Our Story] Button                        │
+│                                                 │
+└─────────────────────────────────────────────────┘
+```
+
+---
+
+## About Hero - Image Overlay Details
+
+```
+Content Layering (Z-index):
+
+┌──────────────────────────────────────────────┐
+│  Z-index: 2 (Foreground)                     │
+│  ┌─────────────────────────────────────────┐ │
+│  │                                         │ │
+│  │             AMMS                        │ │
+│  │  (text displayed here with              │ │
+│  │   text-shadow for readability)          │ │
+│  │                                         │ │
+│  └─────────────────────────────────────────┘ │
+├──────────────────────────────────────────────┤
+│  Z-index: 1 (Behind text)                    │
+│ ▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓│
+│ ▓▓  about-hero.jpg (1200×800px)          ▓▓│
+│ ▓▓  20% opaque (70% visible)             ▓▓│
+│ ▓▓  Behind AMMS text                     ▓▓│
+│ ▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓│
+└──────────────────────────────────────────────┘
+```
+
+---
+
+## Image File Path Mapping
+
+```
+Website Structure:
+c:\xampp\htdocs\Retail system\
+│
+├── index.php
+│   ├─ Line 54: <img src="assets/images/essentials.jpg">
+│   ├─ Line 60: <img src="assets/images/seasonal.jpg">
+│   ├─ Line 66: <img src="assets/images/capsule.jpg">
+│   └─ Line 76: <img src="assets/images/campaign.jpg">
+│
+├── about.php
+│   └─ Line 41: <img src="assets/images/about-hero.jpg">
+│
+└── assets/
+    └── images/
+        ├── essentials.jpg ← UPLOAD HERE
+        ├── seasonal.jpg ← UPLOAD HERE
+        ├── capsule.jpg ← UPLOAD HERE
+        ├── campaign.jpg ← UPLOAD HERE
+        ├── about-hero.jpg ← UPLOAD HERE
+        └── README.md
+```
+
+---
+
+## Quick Visual Summary
+
+| Image | Size | Location | Display |
+|-------|------|----------|---------|
+| essentials.jpg | 400×400 | Homepage - Featured #1 | Square card |
+| seasonal.jpg | 400×400 | Homepage - Featured #2 | Square card |
+| capsule.jpg | 400×400 | Homepage - Featured #3 | Square card |
+| campaign.jpg | 500×600 | Homepage - Campaign | Portrait side-by-side |
+| about-hero.jpg | 1200×800 | About Page | Full-width overlay |
+
+---
+
+## CSS Positioning
+
+### Featured Cards
+```css
+.featured-card img {
+  width: 100%;        /* Full card width */
+  height: 400px;      /* Fixed height */
+  object-fit: cover;  /* Maintains aspect ratio */
+}
+```
+
+### Campaign Image
+```css
+.campaign-image img {
+  width: 100%;        /* Full container width */
+  height: 500px;      /* Fixed height */
+  object-fit: cover;  /* Maintains aspect ratio */
+}
+```
+
+### About Hero Image
+```css
+.about-hero-image {
+  position: absolute; /* Behind text */
+  width: 100%;        /* Full width */
+  height: 100%;       /* Full height */
+  object-fit: cover;  /* Maintains aspect ratio */
+  opacity: 0.7;       /* 70% visible */
+  z-index: 1;         /* Behind text */
+}
+
+.about-hero h1 {
+  z-index: 2;         /* Above image */
+}
+```
+
+---
+
+**All diagrams show exactly where your images will appear!** ✨
+
+Add your 5 images and see them display in these exact locations.

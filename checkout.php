@@ -36,7 +36,10 @@ if ($_SERVER['REQUEST_METHOD'] !== 'POST' || !isset($_POST['payment_method'])) {
     <head>
         <meta charset="utf-8">
         <title>Checkout - AMMS</title>
+        <link rel="icon" type="image/jpeg" href="assets/images/favicon.jpg">
+        <link rel="shortcut icon" href="assets/images/favicon.jpg">
         <link rel="stylesheet" href="css/style.css">
+        <script src="js/scripts.js" defer></script>
     </head>
 
     <body>
@@ -45,22 +48,131 @@ if ($_SERVER['REQUEST_METHOD'] !== 'POST' || !isset($_POST['payment_method'])) {
                 <a href="index.php" class="logo">AMMS</a>
             </div>
         </header>
-        <main class="container" style="padding:60px 20px;">
-            <h2>Checkout</h2>
-            <p style="color:var(--text-light);">Order subtotal: <strong>R <?php echo number_format($total, 2); ?></strong>
+        <main class="container" style="padding:60px 20px; max-width: 800px;">
+            <h2 style="text-align: center; margin-bottom: 8px; font-size: 32px; font-weight: 700;">Checkout</h2>
+            <p style="text-align: center; color: #6b7280; margin-bottom: 40px; font-size: 16px;">
+                Order subtotal: <strong style="color: #111827;">R <?php echo number_format($total, 2); ?></strong>
             </p>
 
-            <form method="post" action="checkout.php">
-                <h3>Select Payment Method</h3>
-                <div style="display:flex;flex-direction:column;gap:12px;max-width:420px;">
-                    <label><input type="radio" name="payment_method" value="card" required> Pay by Card</label>
-                    <label><input type="radio" name="payment_method" value="paypal"> Pay with PayPal</label>
-                    <label><input type="radio" name="payment_method" value="bank"> Bank Transfer</label>
+            <form method="post" action="checkout.php" class="checkout-form">
+                <!-- Payment Method Selection -->
+                <div class="payment-methods-section">
+                    <h3 class="section-title">Payment Method</h3>
+
+                    <div class="payment-methods-grid">
+                        <!-- Pay with Card - Active -->
+                        <label class="payment-method-card active" for="payment_card">
+                            <input type="radio" id="payment_card" name="payment_method" value="card" checked>
+                            <div class="payment-method-content">
+                                <div class="payment-method-icon">
+                                    <svg width="24" height="24" viewBox="0 0 24 24" fill="none"
+                                        xmlns="http://www.w3.org/2000/svg">
+                                        <rect x="2" y="5" width="20" height="14" rx="3" stroke="currentColor"
+                                            stroke-width="2" />
+                                        <line x1="2" y1="9" x2="22" y2="9" stroke="currentColor" stroke-width="1" />
+                                        <line x1="6" y1="13" x2="10" y2="13" stroke="currentColor" stroke-width="1" />
+                                        <line x1="12" y1="13" x2="18" y2="13" stroke="currentColor" stroke-width="1" />
+                                    </svg>
+                                </div>
+                                <div class="payment-method-text">
+                                    <span class="payment-method-name">Pay with Card</span>
+                                    <span class="payment-method-desc">Visa, Mastercard, Amex</span>
+                                </div>
+                            </div>
+                        </label>
+
+                        <!-- PayPal - Coming Soon -->
+                        <div class="payment-method-card coming-soon">
+                            <div class="payment-method-content">
+                                <div class="payment-method-icon paypal-icon">
+                                    <img src="https://www.paypalobjects.com/webstatic/icon/pp258.png" alt="PayPal logo">
+                                </div>
+                                <div class="payment-method-text">
+                                    <span class="payment-method-name">PayPal</span>
+                                    <span class="payment-method-desc">Coming Soon</span>
+                                </div>
+                            </div>
+                            <div class="coming-soon-badge">Coming Soon</div>
+                        </div>
+
+                        <!-- Payflex - Coming Soon -->
+                        <div class="payment-method-card coming-soon">
+                            <div class="payment-method-content">
+                                <div class="payment-method-icon payflex-icon">
+                                    <img src="https://payflex.co.za/favicon.ico" alt="Payflex logo">
+                                </div>
+                                <div class="payment-method-text">
+                                    <span class="payment-method-name">Payflex</span>
+                                    <span class="payment-method-desc">Coming Soon</span>
+                                </div>
+                            </div>
+                            <div class="coming-soon-badge">Coming Soon</div>
+                        </div>
+                    </div>
                 </div>
-                <input type="hidden" name="confirm" value="1">
-                <div style="margin-top:20px;">
-                    <button class="btn" type="submit">Confirm & Pay</button>
-                    <a href="cart.php" class="btn btn-light">Back to Cart</a>
+
+                <!-- Card Payment Form -->
+                <div class="card-payment-section" id="cardPaymentSection">
+                    <div class="card-form-container">
+                        <div class="card-form-header">
+                            <h4>Card Information</h4>
+                            <div class="card-brands">
+                                <img src="https://cdn.jsdelivr.net/gh/simple-icons/simple-icons@v9/icons/visa.svg"
+                                    alt="Visa" class="card-brand-icon">
+                                <img src="https://cdn.jsdelivr.net/gh/simple-icons/simple-icons@v9/icons/mastercard.svg"
+                                    alt="Mastercard" class="card-brand-icon">
+                                <img src="https://cdn.jsdelivr.net/gh/simple-icons/simple-icons@v9/icons/americanexpress.svg"
+                                    alt="American Express" class="card-brand-icon">
+                            </div>
+                        </div>
+
+                        <div class="form-group">
+                            <label for="cardNumber">Card Number</label>
+                            <input type="text" id="cardNumber" name="card_number" placeholder="1234 1234 1234 1234"
+                                maxlength="19" required>
+                        </div>
+
+                        <div class="form-row">
+                            <div class="form-group">
+                                <label for="expiryDate">Expiry Date</label>
+                                <input type="text" id="expiryDate" name="card_expiry" placeholder="MM/YY" maxlength="5"
+                                    required>
+                            </div>
+                            <div class="form-group">
+                                <label for="cvv">CVV</label>
+                                <input type="text" id="cvv" name="card_cvc" placeholder="123" maxlength="4" required>
+                            </div>
+                        </div>
+
+                        <div class="form-group">
+                            <label for="cardholderName">Cardholder Name</label>
+                            <input type="text" id="cardholderName" name="cardholder_name" placeholder="Full name on card"
+                                required>
+                        </div>
+
+                        <div class="form-group">
+                            <label for="billingCountry">Country or Region</label>
+                            <input type="text" id="billingCountry" name="card_country" placeholder="Country or region"
+                                required>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Security Message -->
+                <div class="security-notice">
+                    <svg width="16" height="16" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+                        <path d="M12 2L3 7V17L12 22L21 17V7L12 2Z" stroke="#10B981" stroke-width="2" stroke-linecap="round"
+                            stroke-linejoin="round" />
+                        <path d="M9 12L11 14L15 10" stroke="#10B981" stroke-width="2" stroke-linecap="round"
+                            stroke-linejoin="round" />
+                    </svg>
+                    <span>Secure payment encrypted checkout</span>
+                </div>
+
+                <!-- Action Buttons -->
+                <div class="checkout-actions">
+                    <button type="submit" class="pay-now-btn">Pay Now</button>
+                    <a href="cart.php" class="back-to-cart-btn">Back to Cart</a>
                 </div>
             </form>
         </main>

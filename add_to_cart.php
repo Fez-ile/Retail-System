@@ -5,6 +5,14 @@ require 'config.php';
 
 $product_id = (int) ($_POST['product_id'] ?? 0);
 $quantity = max(1, (int) ($_POST['quantity'] ?? 1));
+$size = strtoupper(trim($_POST['size'] ?? ''));
+$allowedSizes = ['XS', 'S', 'M', 'L', 'XL'];
+
+if (!in_array($size, $allowedSizes, true)) {
+    $_SESSION['error'] = 'Please select a size before adding to cart.';
+    header('Location: products.php');
+    exit;
+}
 
 // check product exists and stock
 $stmt = $mysqli->prepare("SELECT stock FROM products WHERE id = ?");
@@ -33,6 +41,10 @@ if (isset($_SESSION['cart'][$product_id])) {
 } else {
     $_SESSION['cart'][$product_id] = $quantity;
 }
+if (!isset($_SESSION['cart_sizes'])) {
+    $_SESSION['cart_sizes'] = [];
+}
+$_SESSION['cart_sizes'][$product_id] = $size;
 
 $_SESSION['message'] = 'Added to cart.';
 header('Location: products.php');

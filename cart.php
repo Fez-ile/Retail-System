@@ -4,6 +4,7 @@ session_start();
 require 'config.php';
 
 $cart = $_SESSION['cart'] ?? [];
+$cartSizes = $_SESSION['cart_sizes'] ?? [];
 $items = [];
 $total = 0.00;
 
@@ -15,6 +16,7 @@ if ($cart) {
         $pid = $row['id'];
         $qty = $cart[$pid];
         $row['qty'] = $qty;
+        $row['size'] = $cartSizes[$pid] ?? 'M';
         $row['subtotal'] = $qty * $row['price'];
         $items[] = $row;
         $total += $row['subtotal'];
@@ -27,6 +29,8 @@ if ($cart) {
 <head>
     <meta charset="utf-8">
     <title>Shopping Cart - AMMS</title>
+    <link rel="icon" type="image/jpeg" href="assets/images/favicon.jpg">
+    <link rel="shortcut icon" href="assets/images/favicon.jpg">
     <link rel="stylesheet" href="css/style.css">
 </head>
 
@@ -68,6 +72,7 @@ if ($cart) {
                     <tr>
                         <th>Product</th>
                         <th>Price</th>
+                        <th>Size</th>
                         <th>Quantity</th>
                         <th>Subtotal</th>
                     </tr>
@@ -77,6 +82,7 @@ if ($cart) {
                         <tr>
                             <td><?php echo htmlspecialchars($it['name']); ?></td>
                             <td>R <?php echo number_format($it['price'], 2); ?></td>
+                            <td><?php echo htmlspecialchars($it['size']); ?></td>
                             <td><?php echo (int) $it['qty']; ?></td>
                             <td>R <?php echo number_format($it['subtotal'], 2); ?></td>
                         </tr>

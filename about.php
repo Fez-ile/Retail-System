@@ -9,6 +9,9 @@ session_start();
     <meta charset="utf-8">
     <title>About AMMS - Power in Simplicity</title>
     <meta name="viewport" content="width=device-width,initial-scale=1">
+    <link rel="icon" type="image/jpeg" href="assets/images/favicon.jpg">
+    <link rel="shortcut icon" href="assets/images/favicon.jpg">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.2/css/all.min.css">
     <link rel="stylesheet" href="css/style.css">
 </head>
 
@@ -144,9 +147,12 @@ session_start();
                         <button class="btn" type="submit">Subscribe</button>
                     </form>
                     <div class="social-links">
-                        <a href="#" title="Instagram">📷</a>
-                        <a href="#" title="Twitter">𝕏</a>
-                        <a href="#" title="LinkedIn">in</a>
+                        <a href="#" target="_blank" rel="noopener noreferrer" title="Instagram"
+                            aria-label="Instagram"><i class="fa-brands fa-instagram"></i></a>
+                        <a href="#" target="_blank" rel="noopener noreferrer" title="Twitter X" aria-label="Twitter X"><i
+                                class="fa-brands fa-x-twitter"></i></a>
+                        <a href="#" target="_blank" rel="noopener noreferrer" title="LinkedIn" aria-label="LinkedIn"><i
+                                class="fa-brands fa-linkedin-in"></i></a>
                     </div>
                 </div>
             </div>
@@ -157,6 +163,7 @@ session_start();
             </div>
         </div>
     </footer>
+    <script src="js/scripts.js" defer></script>
 </body>
 
 </html>

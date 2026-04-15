@@ -14,6 +14,8 @@ if (!$msg) {
 <head>
     <meta charset="utf-8">
     <title>Order Confirmed - AMMS</title>
+    <link rel="icon" type="image/jpeg" href="assets/images/favicon.jpg">
+    <link rel="shortcut icon" href="assets/images/favicon.jpg">
     <link rel="stylesheet" href="css/style.css">
 </head>
 

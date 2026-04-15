@@ -11,6 +11,8 @@ if (isset($_SESSION['user']))
     <meta charset="utf-8">
     <title>Register - AMMS</title>
     <meta name="viewport" content="width=device-width,initial-scale=1">
+    <link rel="icon" type="image/jpeg" href="assets/images/favicon.jpg">
+    <link rel="shortcut icon" href="assets/images/favicon.jpg">
     <link rel="stylesheet" href="css/style.css">
     <script src="js/scripts.js" defer></script>
 </head>
@@ -48,7 +50,12 @@ if (isset($_SESSION['user']))
             <label>Password</label>
             <input type="password" name="password" required minlength="6">
 
-            <button type="submit" class="btn" style="width:100%;margin-top:10px;">Create Account</button>
+            <label>Confirm Password</label>
+            <input type="password" name="password_confirm" id="passwordConfirm" required minlength="6">
+            <p id="passwordMatchMessage" class="field-error" aria-live="polite"></p>
+
+            <button type="submit" id="registerSubmitBtn" class="btn" style="width:100%;margin-top:10px;">Create
+                Account</button>
         </form>
 
         <p style="text-align:center;margin-top:30px;color:var(--text-light);">

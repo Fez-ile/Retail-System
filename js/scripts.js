@@ -11,14 +11,62 @@ document.addEventListener('DOMContentLoaded', function() {
         });
     });
 
-    // Register form validation
+    function showFloatingAlert(message) {
+        const existing = document.querySelector('.ui-alert');
+        if (existing) {
+            existing.remove();
+        }
+        const alert = document.createElement('div');
+        alert.className = 'ui-alert';
+        alert.textContent = message;
+        document.body.appendChild(alert);
+        setTimeout(() => alert.classList.add('show'), 10);
+        setTimeout(() => {
+            alert.classList.remove('show');
+            setTimeout(() => alert.remove(), 250);
+        }, 2500);
+    }
+
+    // Register form validation (real-time password match)
     const registerForm = document.getElementById('registerForm');
     if (registerForm) {
+        const passwordInput = registerForm.querySelector('input[name="password"]');
+        const confirmInput = registerForm.querySelector('input[name="password_confirm"]');
+        const submitBtn = document.getElementById('registerSubmitBtn');
+        const message = document.getElementById('passwordMatchMessage');
+
+        const syncPasswordState = () => {
+            const pass = passwordInput.value;
+            const passConfirm = confirmInput.value;
+
+            if (!passConfirm) {
+                message.textContent = '';
+                submitBtn.disabled = false;
+                return;
+            }
+
+            if (pass !== passConfirm) {
+                message.textContent = 'Passwords do not match';
+                submitBtn.disabled = true;
+            } else {
+                message.textContent = '';
+                submitBtn.disabled = false;
+            }
+        };
+
+        passwordInput.addEventListener('input', syncPasswordState);
+        confirmInput.addEventListener('input', syncPasswordState);
+
         registerForm.addEventListener('submit', function(e) {
-            const pass = registerForm.querySelector('input[name="password"]').value;
+            const pass = passwordInput.value;
+            const passConfirm = confirmInput.value;
             if (pass.length < 6) {
                 e.preventDefault();
-                alert('Password must be at least 6 characters.');
+                showFloatingAlert('Password must be at least 6 characters.');
+            } else if (pass !== passConfirm) {
+                e.preventDefault();
+                message.textContent = 'Passwords do not match';
+                submitBtn.disabled = true;
             }
         });
     }
@@ -117,22 +165,74 @@ document.addEventListener('DOMContentLoaded', function() {
         });
     });
 
-    // Newsletter subscription
-    document.querySelectorAll('.newsletter button').forEach(btn => {
-        btn.addEventListener('click', function(e) {
-            const input = this.previousElementSibling;
-            if (input && input.value) {
-                const email = input.value;
-                // Simple feedback
-                this.textContent = 'Subscribed';
-                this.style.opacity = '0.5';
-                this.disabled = true;
-                setTimeout(() => {
-                    input.value = '';
-                    this.textContent = 'Subscribe';
-                    this.style.opacity = '1';
-                    this.disabled = false;
-                }, 3000);
+    // Size selection required before add to cart
+    document.querySelectorAll('.requires-size-form').forEach(form => {
+        form.addEventListener('submit', function(e) {
+            const sizeSelect = form.querySelector('select[name="size"]');
+            const error = form.querySelector('.field-error');
+            if (!sizeSelect || !sizeSelect.value) {
+                e.preventDefault();
+                if (error) {
+                    error.textContent = 'Please select a size before adding to cart.';
+                }
+                showFloatingAlert('Please select a size before adding to cart.');
+                sizeSelect.focus();
+                return;
+            }
+            if (error) {
+                error.textContent = '';
+            }
+        });
+    });
+
+    // Card payment form handlers
+    const cardNumberInput = document.getElementById('cardNumber');
+    if (cardNumberInput) {
+        cardNumberInput.addEventListener('input', function(e) {
+            let value = e.target.value.replace(/\s/g, '');
+            let formattedValue = '';
+            for (let i = 0; i < value.length; i++) {
+                if (i > 0 && i % 4 === 0) {
+                    formattedValue += ' ';
+                }
+                formattedValue += value[i];
+            }
+            e.target.value = formattedValue;
+        });
+    }
+
+    const expiryInput = document.getElementById('expiryDate');
+    if (expiryInput) {
+        expiryInput.addEventListener('input', function(e) {
+            let value = e.target.value.replace(/\D/g, '');
+            if (value.length >= 2) {
+                value = value.slice(0, 2) + '/' + value.slice(2, 4);
+            }
+            e.target.value = value;
+        });
+    }
+
+    const cvvInput = document.getElementById('cvv');
+    if (cvvInput) {
+        cvvInput.addEventListener('input', function(e) {
+            e.target.value = e.target.value.replace(/\D/g, '').slice(0, 4);
+        });
+    }
+
+    // Payment method selection
+    const paymentCards = document.querySelectorAll('.payment-method-card:not(.coming-soon)');
+    paymentCards.forEach(card => {
+        card.addEventListener('click', function() {
+            // Remove active class from all cards
+            document.querySelectorAll('.payment-method-card').forEach(c => {
+                c.classList.remove('active');
+            });
+            // Add active class to clicked card
+            this.classList.add('active');
+            // Check the radio button
+            const radio = this.querySelector('input[type="radio"]');
+            if (radio) {
+                radio.checked = true;
             }
         });
     });

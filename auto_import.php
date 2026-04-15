@@ -2,7 +2,7 @@
 // auto_import.php
 
 if (!isset($mysqli) || !($mysqli instanceof mysqli)) {
-    return; // require config.php to have created $mysqli
+    return; 
 }
 
 $marker = __DIR__ . '/.products_imported';

@@ -1,6 +1,5 @@
 <?php
 // import_products.php
-// Run this from the browser or CLI to insert AMMS product list if they don't already exist.
 require 'config.php';
 
 $products = [

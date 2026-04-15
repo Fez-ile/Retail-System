@@ -1,7 +1,5 @@
 <?php
 // auto_import.php
-// Safe automatic importer: runs once and writes a marker file to avoid repeated imports.
-// Requires an active $mysqli connection from config.php.
 
 if (!isset($mysqli) || !($mysqli instanceof mysqli)) {
     return; // require config.php to have created $mysqli
@@ -9,7 +7,7 @@ if (!isset($mysqli) || !($mysqli instanceof mysqli)) {
 
 $marker = __DIR__ . '/.products_imported';
 if (file_exists($marker)) {
-    return; // already imported
+    return; 
 }
 
 $products = [

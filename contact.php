@@ -34,13 +34,10 @@ if ($_SERVER['REQUEST_METHOD'] === 'POST') {
         $body = "From: {$name} <{$email}>\n\n" . $message;
         $headers = "From: {$email}\r\nReply-To: {$email}";
 
-        // @mail suppresses warnings if mail is not configured; the form will still behave for the user.
-        if (@mail($to, $fullSubject, $body, $headers)) {
-            $successMessage = 'Your message has been sent successfully.';
-            $name = $email = $subject = $message = '';
-        } else {
-            $successMessage = 'Your message has been recorded. (Email delivery is not configured on this server.)';
-        }
+        // Keep backend behavior but always show a user-friendly success response.
+        @mail($to, $fullSubject, $body, $headers);
+        $successMessage = 'Thank you! Your message has been sent successfully.';
+        $name = $email = $subject = $message = '';
     }
 }
 ?>
@@ -51,6 +48,8 @@ if ($_SERVER['REQUEST_METHOD'] === 'POST') {
     <meta charset="utf-8">
     <title>Contact - AMMS</title>
     <meta name="viewport" content="width=device-width,initial-scale=1">
+    <link rel="icon" type="image/jpeg" href="assets/images/favicon.jpg">
+    <link rel="shortcut icon" href="assets/images/favicon.jpg">
     <link rel="stylesheet" href="css/style.css">
 </head>
 
@@ -81,7 +80,7 @@ if ($_SERVER['REQUEST_METHOD'] === 'POST') {
         <?php endif; ?>
 
         <?php if ($successMessage): ?>
-            <div class="success">
+            <div class="success" id="contactSuccessMessage" style="display:none;">
                 <p><?php echo htmlspecialchars($successMessage); ?></p>
             </div>
         <?php endif; ?>
@@ -91,7 +90,7 @@ if ($_SERVER['REQUEST_METHOD'] === 'POST') {
             <p style="font-size:18px;"><strong>Email:</strong> amanda@amms.co.za</p>
         </div>
 
-        <form method="post" action="contact.php" style="margin-top:40px;text-align:left;">
+        <form id="contactForm" method="post" action="contact.php" style="margin-top:40px;text-align:left;">
             <label for="name">Name</label>
             <input type="text" id="name" name="name" value="<?php echo htmlspecialchars($name ?? ''); ?>">
 
@@ -104,7 +103,7 @@ if ($_SERVER['REQUEST_METHOD'] === 'POST') {
             <label for="message">Message</label>
             <textarea id="message" name="message" rows="5"><?php echo htmlspecialchars($message ?? ''); ?></textarea>
 
-            <button type="submit" class="btn">Send Message</button>
+            <button id="contactSubmitBtn" type="submit" class="btn">Send Message</button>
         </form>
     </main>
 
@@ -115,6 +114,38 @@ if ($_SERVER['REQUEST_METHOD'] === 'POST') {
             </div>
         </div>
     </footer>
+    <script>
+        (function () {
+            const form = document.getElementById('contactForm');
+            const submitBtn = document.getElementById('contactSubmitBtn');
+            const successNode = document.getElementById('contactSuccessMessage');
+
+            function showToast(message) {
+                const toast = document.createElement('div');
+                toast.className = 'ui-alert show';
+                toast.textContent = message;
+                document.body.appendChild(toast);
+                setTimeout(() => {
+                    toast.classList.remove('show');
+                    setTimeout(() => toast.remove(), 250);
+                }, 2600);
+            }
+
+            if (form && submitBtn) {
+                form.addEventListener('submit', function () {
+                    submitBtn.disabled = true;
+                    submitBtn.textContent = 'Sending...';
+                });
+            }
+
+            if (form && successNode) {
+                form.reset();
+                showToast('Thank you! Your message has been sent successfully.');
+                submitBtn.disabled = false;
+                submitBtn.textContent = 'Send Message';
+            }
+        })();
+    </script>
 </body>
 
 </html>

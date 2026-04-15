@@ -11,6 +11,8 @@ if (isset($_SESSION['user']))
     <meta charset="utf-8">
     <title>Login - AMMS</title>
     <meta name="viewport" content="width=device-width,initial-scale=1">
+    <link rel="icon" type="image/jpeg" href="assets/images/favicon.jpg">
+    <link rel="shortcut icon" href="assets/images/favicon.jpg">
     <link rel="stylesheet" href="css/style.css">
 </head>
 

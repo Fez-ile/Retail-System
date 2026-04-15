@@ -1,12 +1,10 @@
 <?php
 // create_admin.php
-// One-off script to create an admin user. Run locally and delete when done.
-// Usage: open in browser, fill details and submit. Then delete this file.
 
 require 'config.php';
 
 if (php_sapi_name() !== 'cli') {
-    // simple HTML form
+    // HTML form
     if ($_SERVER['REQUEST_METHOD'] === 'POST') {
         $fullname = trim($_POST['fullname'] ?? '');
         $email = trim($_POST['email'] ?? '');
@@ -42,6 +40,8 @@ if (php_sapi_name() !== 'cli') {
     <head>
         <meta charset="utf-8">
         <title>Create Admin</title>
+        <link rel="icon" type="image/jpeg" href="assets/images/favicon.jpg">
+        <link rel="shortcut icon" href="assets/images/favicon.jpg">
         <link rel="stylesheet" href="css/style.css">
     </head>
 
@@ -70,7 +70,6 @@ if (php_sapi_name() !== 'cli') {
     exit;
 }
 
-// CLI usage: php create_admin.php name email password
 if ($argc < 4) {
     echo "Usage: php create_admin.php \"Full Name\" email@example.com password\n";
     exit(1);

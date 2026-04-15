@@ -39,6 +39,8 @@ $cartCount = isset($_SESSION['cart']) ? array_sum($_SESSION['cart']) : 0;
 <head>
     <meta charset="utf-8">
     <title><?php echo htmlspecialchars($product['name']); ?> - AMMS</title>
+    <link rel="icon" type="image/jpeg" href="assets/images/favicon.jpg">
+    <link rel="shortcut icon" href="assets/images/favicon.jpg">
     <link rel="stylesheet" href="css/style.css">
     <script src="js/scripts.js" defer></script>
 </head>
@@ -95,7 +97,7 @@ $cartCount = isset($_SESSION['cart']) ? array_sum($_SESSION['cart']) : 0;
                 </p>
 
                 <!-- ADD TO CART FORM -->
-                <form method="post" action="add_to_cart.php">
+                <form method="post" action="add_to_cart.php" class="requires-size-form">
                     <input type="hidden" name="product_id" value="<?php echo $product['id']; ?>">
 
                     <div class="form-group">
@@ -108,6 +110,7 @@ $cartCount = isset($_SESSION['cart']) ? array_sum($_SESSION['cart']) : 0;
                             <option value="L">Large</option>
                             <option value="XL">Extra Large</option>
                         </select>
+                        <p class="field-error" aria-live="polite"></p>
                     </div>
 
                     <div class="form-group">

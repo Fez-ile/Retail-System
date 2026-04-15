@@ -6,9 +6,10 @@ require 'config.php';
 $fullname = trim($_POST['fullname'] ?? '');
 $email = trim($_POST['email'] ?? '');
 $password = $_POST['password'] ?? '';
+$password_confirm = $_POST['password_confirm'] ?? '';
 
-if (!$fullname || !filter_var($email, FILTER_VALIDATE_EMAIL) || strlen($password) < 6) {
-    $_SESSION['error'] = 'Please provide valid details.';
+if (!$fullname || !filter_var($email, FILTER_VALIDATE_EMAIL) || strlen($password) < 6 || $password !== $password_confirm) {
+    $_SESSION['error'] = $password !== $password_confirm ? 'Passwords do not match.' : 'Please provide valid details.';
     header('Location: register.php');
     exit;
 }

@@ -19,6 +19,8 @@ $cartCount = isset($_SESSION['cart']) ? array_sum($_SESSION['cart']) : 0;
 <head>
     <meta charset="utf-8">
     <title>Shop - AMMS</title>
+    <link rel="icon" type="image/jpeg" href="assets/images/favicon.jpg">
+    <link rel="shortcut icon" href="assets/images/favicon.jpg">
     <link rel="stylesheet" href="css/style.css">
     <script src="js/scripts.js" defer></script>
 </head>
@@ -48,6 +50,14 @@ $cartCount = isset($_SESSION['cart']) ? array_sum($_SESSION['cart']) : 0;
 
     <main class="container products">
         <h2>Shop Our Collection</h2>
+        <?php if (!empty($_SESSION['error'])): ?>
+            <div class="error"><?php echo htmlspecialchars($_SESSION['error']);
+            unset($_SESSION['error']); ?></div>
+        <?php endif; ?>
+        <?php if (!empty($_SESSION['message'])): ?>
+            <div class="success"><?php echo htmlspecialchars($_SESSION['message']);
+            unset($_SESSION['message']); ?></div>
+        <?php endif; ?>
 
         <?php if (count($products) === 0): ?>
             <p class="notice" style="text-align:center;">No products available at this moment. Check back soon.</p>
@@ -72,25 +82,51 @@ $cartCount = isset($_SESSION['cart']) ? array_sum($_SESSION['cart']) : 0;
                     }
                     ?>
                     <div class="product-card">
-                        <a href="product_detail.php?id=<?php echo $p['id']; ?>" style="text-decoration:none; color:inherit;">
+                        <a href="product_detail.php?id=<?php echo $p['id']; ?>" class="product-card-link">
                             <img src="<?php echo $imgSrc; ?>" alt="<?php echo htmlspecialchars($p['name']); ?>">
                             <h3><?php echo htmlspecialchars($p['name']); ?></h3>
                         </a>
-                        <p><?php echo htmlspecialchars(substr($p['description'], 0, 60)) . (strlen($p['description']) > 60 ? '...' : ''); ?>
-                        </p>
-                        <p class="price">R <?php echo number_format($p['price'], 2); ?></p>
-                        <p style="font-size:12px;color:var(--text-light);">
-                            <?php echo $p['stock'] > 0 ? 'In Stock' : 'Sold Out'; ?>
-                        </p>
+                        <div class="product-info">
+                            <p><?php echo htmlspecialchars(substr($p['description'], 0, 60)) . (strlen($p['description']) > 60 ? '...' : ''); ?>
+                            </p>
+                            <p class="price">R <?php echo number_format($p['price'], 2); ?></p>
+                            <p class="stock-status">
+                                <?php echo $p['stock'] > 0 ? 'In Stock' : 'Sold Out'; ?>
+                            </p>
+                        </div>
 
-                        <form method="post" action="add_to_cart.php">
+                        <form method="post" action="add_to_cart.php" class="requires-size-form">
                             <input type="hidden" name="product_id" value="<?php echo $p['id']; ?>">
-                            <div class="form-group" style="display:flex;gap:10px;">
-                                <input type="number" name="quantity" value="1" min="1" max="<?php echo (int) $p['stock']; ?>"
-                                    style="width:60px;">
-                                <button class="btn" type="submit" <?php echo $p['stock'] <= 0 ? 'disabled' : ''; ?>>Add to
-                                    Cart</button>
+                            <div class="purchase-controls">
+                                <div class="control-field">
+                                    <label for="size-<?php echo $p['id']; ?>">Size</label>
+                                    <select id="size-<?php echo $p['id']; ?>" name="size" class="size-select" required>
+                                        <option value="">Select</option>
+                                        <option value="XS">XS</option>
+                                        <option value="S">S</option>
+                                        <option value="M">M</option>
+                                        <option value="L">L</option>
+                                        <option value="XL">XL</option>
+                                    </select>
+                                </div>
+                                <div class="control-field control-qty">
+                                    <label for="qty-<?php echo $p['id']; ?>">Qty</label>
+                                    <input id="qty-<?php echo $p['id']; ?>" type="number" name="quantity" value="1" min="1"
+                                        max="<?php echo (int) $p['stock']; ?>">
+                                </div>
                             </div>
+                            <p class="field-error" aria-live="polite"></p>
+                            <button class="btn add-to-cart-btn" type="submit" <?php echo $p['stock'] <= 0 ? 'disabled' : ''; ?>>
+                                <span class="cart-btn-icon" aria-hidden="true">
+                                    <svg viewBox="0 0 24 24" width="16" height="16" fill="none" xmlns="http://www.w3.org/2000/svg">
+                                        <path d="M3 5h2l2.2 9.2a1 1 0 0 0 1 .8h8.9a1 1 0 0 0 1-.8L20 8H7.2" stroke="currentColor"
+                                            stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" />
+                                        <circle cx="10" cy="19" r="1.5" fill="currentColor" />
+                                        <circle cx="17" cy="19" r="1.5" fill="currentColor" />
+                                    </svg>
+                                </span>
+                                <span>Add to Cart</span>
+                            </button>
                         </form>
                     </div>
                 <?php endforeach; ?>
